@@ -20,7 +20,3 @@
 12.   1 x 1/4W Ceramic metal film resistors set (600 PCS)
 13.   1 x Glass fiber prototyping PCB
 14.   1 x 3-Pin toggle switch (5-Pack)
-
-## CODE
-
-The code can be found in this directory:[Balancing_robot](~/tirocinio/YABR/Balancing_robot)
