@@ -1,5 +1,5 @@
 # ARDUINO - BIPOLAR STEP MOTORS
-#### Self balancing robot
+## Self balancing robot
 
 [LINK to the project(GitHub)](https://github.com/jcfs/self-balancing-robot)
 
