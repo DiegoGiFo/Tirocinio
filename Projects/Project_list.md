@@ -10,5 +10,5 @@
 7. [Arduino - bipolar stepper motors](https://www.youtube.com/watch?v=o339cVn5oNA) -->
    [GitHub link](https://github.com/jcfs/self-balancing-robot)
 8. [Balanduino](http://www.balanduino.net/) --> [GitHub](https://github.com/TKJElectronics/Balanduino)
-9. [ProfileBlock](https://www.thingiverse.com/thing:2269502)
-10. [RS4 Robot ](https://www.robotshop.com/letsmakerobots/rs4-self-balancing-raspberry-pi-image-processing-robot) 
+9. [ProfileBlock](https://www.thingiverse.com/thing:2269502) Not bad
+10. [RS4 Robot](https://www.robotshop.com/letsmakerobots/rs4-self-balancing-raspberry-pi-image-processing-robot) Maybe too complex 
