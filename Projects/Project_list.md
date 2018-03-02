@@ -9,3 +9,8 @@
 6. [Balanduino](http://www.balanduino.net/) --> [GitHub](https://github.com/TKJElectronics/Balanduino) No nema 17
 7. [ProfileBlock](https://www.thingiverse.com/thing:2269502) Not bad
 8. [RS4 Robot](https://www.robotshop.com/letsmakerobots/rs4-self-balancing-raspberry-pi-image-processing-robot) Maybe too complex
+
+## REMARKS
+
+In my opinion the projects 1, 4 and 7 are more realizable that the others.
+Projects 1 and 4 are the most appropriate for us goal.
