@@ -1,12 +1,12 @@
-#MINI BALANCING ROBOT
+# MINI BALANCING ROBOT
 ## Self balancing robot
 
 [Link to project](http://axelsdiy.brinkeby.se/?page_id=1447)
 
-###SHORT DESCRIPTION
+### SHORT DESCRIPTION
 The robot uses two NEMA14 stepper motors and the electronics consists of a single Arduino Pro Micro and a MPU-6050 gyro/accelerometer breakout board. Two A4988 stepper drivers are used to drive the motors. The mechanical construction of the entire robot is made up of several 3D printed parts that are screwed together with M3 screws, this makes it fast and easy to assemble.
 
-##MATERIAL
+## MATERIAL
 
 1.    Arduino Pro Micro (clone)
 2.    2 pcs. NEMA 14 stepper motors (1.8 degrees per step)
@@ -19,5 +19,5 @@ The robot uses two NEMA14 stepper motors and the electronics consists of a singl
 9.    About 20 pcs. M3 16 mm screws with nuts are used to assemble the robot
 10.   Two toggle switches used for auxiliary functions
 
-##CODE
+## CODE
 Present
