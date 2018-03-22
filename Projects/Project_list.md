@@ -9,6 +9,7 @@
 6. [Balanduino](http://www.balanduino.net/) --> [GitHub](https://github.com/TKJElectronics/Balanduino) No nema 17
 7. [ProfileBlock](https://www.thingiverse.com/thing:2269502) Not bad
 8. [RS4 Robot](https://www.robotshop.com/letsmakerobots/rs4-self-balancing-raspberry-pi-image-processing-robot) Maybe too complex
+9. [Self Balancing Robot Development Platform ](https://www.thingiverse.com/thing:2645682/#files)
 
 ## REMARKS
 
