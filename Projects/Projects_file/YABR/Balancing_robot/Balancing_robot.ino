@@ -57,7 +57,7 @@ void setup(){
   TCCR2B |= (1 << CS21);                                                    //Set the CS21 bit in the TCCRB register to set the prescaler to 8
   OCR2A = 39;                                                               //The compare register is set to 39 => 20us / (1s / (16.000.000MHz / 8)) - 1
   TCCR2A |= (1 << WGM21);                                                   //Set counter 2 to CTC (clear timer on compare) mode
-  
+
   //By default the MPU-6050 sleeps. So we have to wake it up.
   Wire.beginTransmission(gyro_address);                                     //Start communication with the address found during search.
   Wire.write(0x6B);                                                         //We want to write to the PWR_MGMT_1 register (6B hex)
@@ -77,7 +77,7 @@ void setup(){
   Wire.beginTransmission(gyro_address);                                     //Start communication with the address found during search
   Wire.write(0x1A);                                                         //We want to write to the CONFIG register (1A hex)
   Wire.write(0x03);                                                         //Set the register bits as 00000011 (Set Digital Low Pass Filter to ~43Hz)
-  Wire.endTransmission();                                                   //End the transmission with the gyro 
+  Wire.endTransmission();                                                   //End the transmission with the gyro
 
   pinMode(2, OUTPUT);                                                       //Configure digital poort 2 as output
   pinMode(3, OUTPUT);                                                       //Configure digital poort 3 as output
@@ -112,7 +112,7 @@ void loop(){
   }
   if(receive_counter <= 25)receive_counter ++;                              //The received byte will be valid for 25 program loops (100 milliseconds)
   else received_byte = 0x00;                                                //After 100 milliseconds the received byte is deleted
-  
+
   //Load the battery voltage to the battery_voltage variable.
   //85 is the voltage compensation for the diode.
   //Resistor voltage divider => (3.3k + 3.3k)/2.2k = 2.5
@@ -121,7 +121,7 @@ void loop(){
   //1250 / 1023 = 1.222.
   //The variable battery_voltage holds 1050 if the battery voltage is 10.5V.
   battery_voltage = (analogRead(0) * 1.222) + 85;
-  
+
   if(battery_voltage < 1050 && battery_voltage > 800){                      //If batteryvoltage is below 10.5V and higher than 8.0V
     digitalWrite(13, HIGH);                                                 //Turn on the led if battery voltage is to low
     low_bat = 1;                                                            //Set the low_bat variable to 1
@@ -145,28 +145,28 @@ void loop(){
     angle_gyro = angle_acc;                                                 //Load the accelerometer angle in the angle_gyro variable
     start = 1;                                                              //Set the start variable to start the PID controller
   }
-  
+
   Wire.beginTransmission(gyro_address);                                     //Start communication with the gyro
   Wire.write(0x43);                                                         //Start reading at register 43
   Wire.endTransmission();                                                   //End the transmission
   Wire.requestFrom(gyro_address, 4);                                        //Request 4 bytes from the gyro
   gyro_yaw_data_raw = Wire.read()<<8|Wire.read();                           //Combine the two bytes to make one integer
   gyro_pitch_data_raw = Wire.read()<<8|Wire.read();                         //Combine the two bytes to make one integer
-  
+
   gyro_pitch_data_raw -= gyro_pitch_calibration_value;                      //Add the gyro calibration value
   angle_gyro += gyro_pitch_data_raw * 0.000031;                             //Calculate the traveled during this loop angle and add this to the angle_gyro variable
-  
+
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //MPU-6050 offset compensation
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //Not every gyro is mounted 100% level with the axis of the robot. This can be cause by misalignments during manufacturing of the breakout board. 
+  //Not every gyro is mounted 100% level with the axis of the robot. This can be cause by misalignments during manufacturing of the breakout board.
   //As a result the robot will not rotate at the exact same spot and start to make larger and larger circles.
   //To compensate for this behavior a VERY SMALL angle compensation is needed when the robot is rotating.
   //Try 0.0000003 or -0.0000003 first to see if there is any improvement.
 
   gyro_yaw_data_raw -= gyro_yaw_calibration_value;                          //Add the gyro calibration value
   //Uncomment the following line to make the compensation active
-  //angle_gyro -= gyro_yaw_data_raw * 0.0000003;                            //Compensate the gyro offset when the robot is rotating
+  angle_gyro -= gyro_yaw_data_raw * 0.0000003;                            //Compensate the gyro offset when the robot is rotating
 
   angle_gyro = angle_gyro * 0.9996 + angle_acc * 0.0004;                    //Correct the drift of the gyro angle with the accelerometer angle
 
@@ -220,14 +220,14 @@ void loop(){
   if(received_byte & B00001000){                                            //If the forth bit of the receive byte is set change the left and right variable to turn the robot to the right
     if(pid_setpoint < 2.5)pid_setpoint += 0.05;                             //Slowly change the setpoint angle so the robot starts leaning backwards
     if(pid_output < max_target_speed)pid_setpoint += 0.005;                 //Slowly change the setpoint angle so the robot starts leaning backwards
-  }   
+  }
 
   if(!(received_byte & B00001100)){                                         //Slowly reduce the setpoint to zero if no foreward or backward command is given
     if(pid_setpoint > 0.5)pid_setpoint -=0.05;                              //If the PID setpoint is larger then 0.5 reduce the setpoint with 0.05 every loop
     else if(pid_setpoint < -0.5)pid_setpoint +=0.05;                        //If the PID setpoint is smaller then -0.5 increase the setpoint with 0.05 every loop
     else pid_setpoint = 0;                                                  //If the PID setpoint is smaller then 0.5 or larger then -0.5 set the setpoint to 0
   }
-  
+
   //The self balancing point is adjusted when there is not forward or backwards movement from the transmitter. This way the robot will always find it's balancing point
   if(pid_setpoint == 0){                                                    //If the setpoint is zero degrees
     if(pid_output < 0)self_balance_pid_setpoint += 0.0015;                  //Increase the self_balance_pid_setpoint if the robot is still moving forewards
@@ -282,8 +282,8 @@ ISR(TIMER2_COMPA_vect){
     else PORTD |= 0b00001000;                                               //Set output 3 high for a forward direction of the stepper motor
   }
   else if(throttle_counter_left_motor == 1)PORTD |= 0b00000100;             //Set output 2 high to create a pulse for the stepper controller
-  else if(throttle_counter_left_motor == 2)PORTD &= 0b11111011;             //Set output 2 low because the pulse only has to last for 20us 
-  
+  else if(throttle_counter_left_motor == 2)PORTD &= 0b11111011;             //Set output 2 low because the pulse only has to last for 20us
+
   //right motor pulse calculations
   throttle_counter_right_motor ++;                                          //Increase the throttle_counter_right_motor variable by 1 every time the routine is executed
   if(throttle_counter_right_motor > throttle_right_motor_memory){           //If the number of loops is larger then the throttle_right_motor_memory variable
@@ -298,29 +298,3 @@ ISR(TIMER2_COMPA_vect){
   else if(throttle_counter_right_motor == 1)PORTD |= 0b00010000;            //Set output 4 high to create a pulse for the stepper controller
   else if(throttle_counter_right_motor == 2)PORTD &= 0b11101111;            //Set output 4 low because the pulse only has to last for 20us
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
