@@ -1,7 +1,3 @@
-- Small description of the project;
-- Advantages and disadvantges;
-- Areas of usage;
-
 - Hardware (description of each component);
 - software (commenting line by line);
 - biulding;
@@ -26,6 +22,12 @@ The overall cost of the robot is of about 200€. The component that i used are 
 - MPU-6050 gyro/accelerometer --> Link[https://www.amazon.it/gp/product/B00PL70P7K/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1];
 - 1 x Regolable buck converter DC-DC step down --> Link[https://www.amazon.it/gp/product/B01MQGMOKI/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1];
 - 1 x 11.1V 2200mAh 30C Li-polymer Battery (da aggiungere in seguito) --> Link[];
+- Raspberry Pi 3 --> Link[https://www.amazon.it/Raspberry-PI-Model-Scheda-madre/dp/B01CD5VC92/ref=sr_1_3?ie=UTF8&qid=1526569586&sr=8-3&keywords=raspberry+pi+3].
+
+### THE MPU-6050 GYRO/ACCELEROMETER
+
+The MPU-6050 sensor contains a MEMS accelerometer and a MEMS gyro in a single chip. It is very accurate, as it contains 16-bits analog to digital conversion hardware for each channel. Therefor it captures the x, y, and z channel at the same time. The sensor uses the I2C-bus to interface with the Arduino.
+The orientation of the gyro is important. Make sure to mount the gyro in the exact same orientation as shown in the electronic schematic picture. Otherwise the software cannot calculate the correct angle and the robot will not work. 
 
 ## ELECTRONIC SCHEMATIC
 
