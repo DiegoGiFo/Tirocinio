@@ -28,3 +28,7 @@ The overall cost of the robot is of about 200€. The component that i used are 
 - 1 x 11.1V 2200mAh 30C Li-polymer Battery (da aggiungere in seguito) --> Link[];
 
 ## ELECTRONIC SCHEMATIC
+
+In this photo is explained how to connect the components of this project.
+
+![electronic_schematic](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/tot_scheme.jpg?raw=true "Figure 1-1")
