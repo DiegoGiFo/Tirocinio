@@ -52,3 +52,9 @@ The MPU-6050 always acts as a slave to the Arduino with the SDA and SCL pins con
 ### THE PID CONTROLLER
 
 ![PID](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/PID.png?raw=true "Schematic")
+
+A proportional–integral–derivative controller (PID controller or three term controller) is a control loop feedback mechanism widely used in industrial control systems and a variety of other applications requiring continuously modulated control. A PID controller continuously calculates an error value e(t) as the difference between a desired setpoint (SP) and a measured process variable (PV) and applies a correction based on proportional, integral, and derivative terms (denoted P, I, and D respectively) which give the controller its name.
+In practical terms it automatically applies accurate and responsive correction to a control function.
+
+In this project the PID controller is used in order to control and modify the equilibrium point of the robot.
+Starting with a set point, which is acquired in an initial phase of the robot routine, every change of that is compensated by the algorith and the speed of the motors is setted as a consequence.
