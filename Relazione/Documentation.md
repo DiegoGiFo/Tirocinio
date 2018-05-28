@@ -65,6 +65,8 @@ Starting with a set point, which is acquired in an initial phase of the robot ro
 
 ### ROS SERIAL
 
+![graph_1](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/ros_graph1.png?raw=true "Schematic")
+
 Rosserial is a protocol for wrapping standard ROS serialized messages and multiplexing multiple topics and services over a character device such as a serial port or network socket.
 
 In this project rosserial is used for interfacing the Arduino board with the ROS world.
