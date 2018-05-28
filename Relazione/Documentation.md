@@ -71,4 +71,9 @@ Rosserial is a protocol for wrapping standard ROS serialized messages and multip
 
 In this project rosserial is used for interfacing the Arduino board with the ROS world.
 The Arduino subscribes to the cmd_vel topic that receives the data from the turtel_bot3_teleop_keyboard topic,
-elaborates the data in order to autobalance the robot and publishes the value received from the IMU on the gyro_info topic.  
+elaborates the data in order to autobalance the robot and publishes the value received from the IMU on the gyro_info topic.
+
+
+## REMOTE CONTROL
+
+Raspberry description
