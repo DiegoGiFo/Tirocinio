@@ -51,4 +51,4 @@ The MPU-6050 always acts as a slave to the Arduino with the SDA and SCL pins con
 
 ### THE PID CONTROLLER
 
-![PID](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/1280px-Pid-feedback-nct-int-correct.png?raw=true "Schematic")
+![PID](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/PID.png?raw=true "Schematic")
