@@ -43,7 +43,7 @@ The robot is realized using some component and some software algorith that are e
 
 ### THE MPU-6050 GYRO/ACCELEROMETER
 
-![MPU-6050](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/mpu-6050.jpg?raw=true "Schematic")
+![MPU-6050](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/mpu-6050.jpg?raw=true "Schematic" width="200" height="400")
 
 The only gyro/accelerometer that is supported by the software is the MPU-6050.
 The InvenSense MPU-6050 sensor contains a MEMS accelerometer and a MEMS gyro in a single chip. It is very accurate, as it contains 16-bits analog to digital conversion hardware for each channel. Therefor it captures the x, y, and z channel at the same time. The sensor uses the I2C-bus to interface with the Arduino.
