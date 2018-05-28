@@ -17,12 +17,12 @@ The goal of this robot is to learn all the phases of realization of a project an
 
 The overall cost of the robot is of about 200€. The component that i used are the follwing:
 
-- EleksMaker Mana SE board --> Link[https://www.amazon.com/EleksMaker-ManaSE-Stepper-Controller-Engraver/dp/B06Y5Q29CR];
-- 2 x NEMA17 34mm stepper motors --> Link[https://www.amazon.it/gp/product/B01B2C7JU8/ref=oh_aui_detailpage_o05_s01?ie=UTF8&psc=1];
-- MPU-6050 gyro/accelerometer --> Link[https://www.amazon.it/gp/product/B00PL70P7K/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1];
-- 1 x Regolable buck converter DC-DC step down --> Link[https://www.amazon.it/gp/product/B01MQGMOKI/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1];
+- EleksMaker Mana SE board --> [Link](https://www.amazon.com/EleksMaker-ManaSE-Stepper-Controller-Engraver/dp/B06Y5Q29CR);
+- 2 x NEMA17 34mm stepper motors --> [Link](https://www.amazon.it/gp/product/B01B2C7JU8/ref=oh_aui_detailpage_o05_s01?ie=UTF8&psc=1);
+- MPU-6050 gyro/accelerometer --> [Link](https://www.amazon.it/gp/product/B00PL70P7K/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1);
+- 1 x Regolable buck converter DC-DC step down --> [Link](https://www.amazon.it/gp/product/B01MQGMOKI/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1);
 - 1 x 11.1V 2200mAh 30C Li-polymer Battery (da aggiungere in seguito) --> Link[];
-- Raspberry Pi 3 --> Link[https://www.amazon.it/Raspberry-PI-Model-Scheda-madre/dp/B01CD5VC92/ref=sr_1_3?ie=UTF8&qid=1526569586&sr=8-3&keywords=raspberry+pi+3].
+- Raspberry Pi 3 --> [Link](https://www.amazon.it/Raspberry-PI-Model-Scheda-madre/dp/B01CD5VC92/ref=sr_1_3?ie=UTF8&qid=1526569586&sr=8-3&keywords=raspberry+pi+3).
 
 ### THE MPU-6050 GYRO/ACCELEROMETER
 
@@ -37,4 +37,4 @@ In this photo is explained how to connect the components of this project.
 
 ## CODE
 
-The code can be dowload here: Code_download[https://github.com/DiegoGiFo/Autobalancing_Robot/tree/master/complete_vs/final_balancing_robot/final]
+The code can be dowload here: [Code_download](https://github.com/DiegoGiFo/Autobalancing_Robot/tree/master/complete_vs/final_balancing_robot/final)
