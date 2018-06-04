@@ -27,7 +27,7 @@ In this photo is explained how to connect the components of this project.
 
 ## CODE
 
-The commented code can be dowload here: [Code_download](https://github.com/DiegoGiFo/Autobalancing_Robot/tree/master/complete_vs/final_balancing_robot/final)
+The commented code can be dowload here: [Code_download](https://github.com/DiegoGiFo/Tirocinio/tree/master/Relazione/code)
 
 ## COMMENTS
 
