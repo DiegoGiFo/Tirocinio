@@ -68,7 +68,7 @@ Starting with a set point, which is acquired in an initial phase of the robot ro
 Rosserial is a protocol for wrapping standard ROS serialized messages and multiplexing multiple topics and services over a character device such as a serial port or network socket.
 
 In this project rosserial is used for interfacing the Arduino board with the ROS world.
-The Arduino subscribes to the cmd_vel topic that receives the data from the turtel_bot3_teleop_keyboard topic,
+The Arduino ,in the schematic is labelled /serial_node, subscribes to the cmd_vel topic that receives the data from the turtel_bot3_teleop_keyboard topic,
 elaborates the data in order to autobalance the robot and publishes the value received from the IMU on the gyro_info topic.
 
 
