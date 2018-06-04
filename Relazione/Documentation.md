@@ -62,6 +62,9 @@ In this project the PID controller is used in order to control and modify the eq
 Starting with a set point, which is acquired in an initial phase of the robot routine, every change of that is compensated by the algorithm and the speed of the motors is setted as a consequence.
 
 
+Future implementation --> 
+
+
 ### ROS SERIAL
 
 ![graph_1](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/images/ros_graph1.png?raw=true "Schematic")
