@@ -16,7 +16,7 @@ The overall cost of the robot is of about 200€. The component that i used are 
 - 2 x NEMA17 34mm stepper motors --> [Link](https://www.amazon.it/gp/product/B01B2C7JU8/ref=oh_aui_detailpage_o05_s01?ie=UTF8&psc=1);
 - MPU-6050 gyro/accelerometer --> [Link](https://www.amazon.it/gp/product/B00PL70P7K/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1);
 - 1 x Regolable buck converter DC-DC step down --> [Link](https://www.amazon.it/gp/product/B01MQGMOKI/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1);
-- 1 x 11.1V 2200mAh 30C Li-polymer Battery (da aggiungere in seguito) --> Link[];
+- 1 x 11.1V 2200mAh 30C Li-polymer Battery (da aggiungere in seguito) --> [Link](https://hobbyking.com/en_us/turnigy-battery-3000mah-3s-20c-lipo-pack-xt-60.html);
 - Raspberry Pi 3 --> [Link](https://www.amazon.it/Raspberry-PI-Model-Scheda-madre/dp/B01CD5VC92/ref=sr_1_3?ie=UTF8&qid=1526569586&sr=8-3&keywords=raspberry+pi+3).
 
 ## ELECTRONIC SCHEMATIC
@@ -50,7 +50,6 @@ The orientation of the gyro is important. Make sure to mount the gyro in the exa
 A proportional–integral–derivative controller (PID controller or three term controller) is a control loop feedback mechanism widely used in industrial control systems and a variety of other applications requiring continuously modulated control. A PID controller continuously calculates an error value e(t) as the difference between a desired setpoint (SP) and a measured process variable (PV) and applies a correction based on proportional, integral, and derivative terms (denoted P, I, and D respectively) which give the controller its name.
 In practical terms it automatically applies accurate and responsive correction to a control function.
 
-
 Term P is proportional to the current value of the SP − PV error e(t). For example, if the error is large and positive, the control output will be proportionately large and positive, taking into account the gain factor "K". Using proportional control alone in a process with compensation such as temperature control, will result in an error between the setpoint and the actual process value, because it requires an error to generate the proportional response. If there is no error, there is no corrective response.
 
 Term I accounts for past values of the SP − PV error and integrates them over time to produce the I term. For example, if there is a residual SP − PV error after the application of proportional control, the integral term seeks to eliminate the residual error by adding a control effect due to the historic cumulative value of the error. When the error is eliminated, the integral term will cease to grow. This will result in the proportional effect diminishing as the error decreases, but this is compensated for by the growing integral effect.
@@ -59,6 +58,8 @@ Term D is a best estimate of the future trend of the SP − PV error, based 
 
 In this project the PID controller is used in order to control and modify the equilibrium point of the robot.
 Starting with a set point, which is acquired in an initial phase of the robot routine, every change of that is compensated by the algorith and the speed of the motors is setted as a consequence.
+
+
 
 
 ### ROS SERIAL
