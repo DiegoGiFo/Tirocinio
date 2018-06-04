@@ -18,7 +18,7 @@ The overall cost of the robot is of about 200€. The component that i used are 
 - 2 x NEMA17 34mm stepper motors --> [Link](https://www.amazon.it/gp/product/B01B2C7JU8/ref=oh_aui_detailpage_o05_s01?ie=UTF8&psc=1);
 - MPU-6050 gyro/accelerometer --> [Link](https://www.amazon.it/gp/product/B00PL70P7K/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1);
 - 1 x Regolable buck converter DC-DC step down --> [Link](https://www.amazon.it/gp/product/B01MQGMOKI/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1);
-- 1 x 11.1V 2200mAh 30C Li-polymer Battery (da aggiungere in seguito) --> [Link](https://hobbyking.com/en_us/turnigy-battery-3000mah-3s-20c-lipo-pack-xt-60.html);
+- 1 x 11.1V 2200mAh 30C Li-polymer Battery --> [Link](https://hobbyking.com/en_us/turnigy-battery-3000mah-3s-20c-lipo-pack-xt-60.html);
 - Raspberry Pi 3 --> [Link](https://www.amazon.it/Raspberry-PI-Model-Scheda-madre/dp/B01CD5VC92/ref=sr_1_3?ie=UTF8&qid=1526569586&sr=8-3&keywords=raspberry+pi+3).
 
 ## ELECTRONIC SCHEMATIC
@@ -62,7 +62,7 @@ In this project the PID controller is used in order to control and modify the eq
 Starting with a set point, which is acquired in an initial phase of the robot routine, every change of that is compensated by the algorithm and the speed of the motors is setted as a consequence.
 
 
-Future implementation --> 
+Future implementation --> DA FINIRE!!
 
 
 ### ROS SERIAL
