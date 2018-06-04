@@ -23,7 +23,7 @@ The overall cost of the robot is of about 200€. The component that i used are 
 
 In this photo is explained how to connect the components of this project.
 
-![electronic_schematic](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/tot_scheme.jpg?raw=true "Schematic")
+![electronic_schematic](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/images/tot_scheme.jpg?raw=true "Schematic")
 
 ## CODE
 
@@ -35,7 +35,7 @@ The robot is realized using some components and some software algorithms that ar
 
 ### THE MPU-6050 GYRO/ACCELEROMETER
 
-![MPU-6050](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/mpu-6050.jpg?raw=true "Schematic")
+![MPU-6050](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/images/mpu-6050.jpg?raw=true "Schematic")
 
 The only gyro/accelerometer that is supported by the software is the MPU-6050.
 The InvenSense MPU-6050 sensor contains a MEMS accelerometer and a MEMS gyro in a single chip. It is very accurate, as it contains 16-bits analog to digital conversion hardware for each channel. Therefor it captures the x, y, and z channel at the same time. The sensor uses the I2C-bus to interface with the Arduino.
@@ -45,7 +45,7 @@ The orientation of the gyro is important. Make sure to mount the gyro in the exa
 
 ### THE PID CONTROLLER
 
-![PID](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/PID.png?raw=true "Schematic")
+![PID](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/images/PID.png?raw=true "Schematic")
 
 A proportional–integral–derivative controller (PID controller or three term controller) is a control loop feedback mechanism widely used in industrial control systems and a variety of other applications requiring continuously modulated control. A PID controller continuously calculates an error value e(t) as the difference between a desired setpoint (SP) and a measured process variable (PV) and applies a correction based on proportional, integral, and derivative terms (denoted P, I, and D respectively) which give the controller its name.
 In practical terms it automatically applies accurate and responsive correction to a control function.
@@ -63,7 +63,7 @@ Starting with a set point, which is acquired in an initial phase of the robot ro
 
 ### ROS SERIAL
 
-![graph_1](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/ros_graph1.png?raw=true "Schematic")
+![graph_1](https://github.com/DiegoGiFo/Tirocinio/blob/master/Relazione/images/ros_graph1.png?raw=true "Schematic")
 
 Rosserial is a protocol for wrapping standard ROS serialized messages and multiplexing multiple topics and services over a character device such as a serial port or network socket.
 
