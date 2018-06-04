@@ -1,6 +1,3 @@
-- building;
-- remote control;
-
 # ROS BALANCING ROBOT
 
 This is my version of a self-balancing robot. The robot uses two NEMA17 stepper motors. I decided to use stepper motors because they are more precise with respect to DC motors and have good performance in term of power consumption.
@@ -75,7 +72,7 @@ The Arduino subscribes to the cmd_vel topic that receives the data from the turt
 elaborates the data in order to autobalance the robot and publishes the value received from the IMU on the gyro_info topic.
 
 
-## REMOTE CONTROL
+### REMOTE CONTROL
 
-Dire che su cmd_vel pubblica rosbridge comandato da web
-Raspberry description
+The remote control is implemented using a raspberry that sends , due to a rosbridge node , the datas to the cmd_vel.
+The rosbridge node receives datas from the internet interface and due to that actions the robot is remote controlled.
